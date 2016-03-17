@@ -1,0 +1,48 @@
+<style type="text/css">
+#body {
+  font-family:helvetica, geneva, sans serif;
+}
+  .alpha {
+    font-family:helvetica, geneva, sans serif;
+    position: absolute;
+    text-align: center;    
+    top: 1em;
+    left: 1em;
+    font-weight: bold;
+    color: #000000;
+    width: 164px;
+    font-size: 18px;
+  }
+  .state {
+    position: absolute;
+    text-align: center;    
+    top: 4.5em;
+    font-weight: bold;
+    color: #336699;
+    width: 164px;
+    font-size: 16px;
+  }
+  .bullets {
+    position: absolute;
+    text-align: left;    
+    top: 10em;
+    font-weight: normal;
+    color: #000000;
+    width: 164px;
+    font-size: 10px;
+  }
+
+li {
+  list-style-type: disc;
+}  
+ .number {
+    position: absolute;
+    top: 17em;
+    text-align: center;    
+    color: #336699;
+    font-weight: bold;
+    font-size: 12px;
+    width: 164px;
+  }
+
+</style>
