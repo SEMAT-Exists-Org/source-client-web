@@ -1,0 +1,72 @@
+<div id="loginbox" style="margin-top: 10px;" class="mainbox col-md-12">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<div class="panel-title">Register new SEMAT Exists User</div>
+		</div>
+		
+		<div style="padding-top: 0px" class="panel-body">
+			<form name="registerForm" class="form-horizontal" method="post" ng-submit="submit()" novalidate form-autofill-fix>
+				
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+					<input type="text"
+						class="form-control" name="firstname"
+						ng-model="registrationInfo.firstname" placeholder="First Name" required />
+				</div>
+				<div class="error"
+					ng-show="(submitted  || registerForm.firstname.$dirty)  && registerForm.firstname.$invalid">
+					<p class="error" ng-show="registerForm.firstname.$error.required">'Lastname' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+					<input type="text"
+						class="form-control" name="lastname"
+						ng-model="registrationInfo.lastname" placeholder="Last Name" required />
+				</div>
+				<div class="error"
+					ng-show="(submitted  || registerForm.lastname.$dirty)  && registerForm.lastname.$invalid">
+					<p class="error" ng-show="registerForm.lastname.$error.required">'Fistname' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i
+						class="glyphicon glyphicon-user"></i></span> <input type="text"
+						class="form-control" name="email"
+						ng-model="registrationInfo.email" placeholder="Email" required />
+				</div>
+				<div class="error"
+					ng-show="(submitted  || registerForm.email.$dirty)  && registerForm.email.$invalid">
+					<p class="error" ng-show="registerForm.email.$error.required">'Email' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> 
+					<input type="password"
+						class="form-control" name="password"
+						ng-model="registrationInfo.password" placeholder="Password" required />
+				</div>
+				<div class="error"
+					ng-show="(submitted  || registerForm.password.$dirty)  && registerForm.password.$invalid">
+					<p class="error" ng-show="registerForm.password.$error.required">'Password' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 10px" class="form-group">
+					<!-- Button -->
+
+				<p ng-show="error" class="error">Registration Error - Please fill in all fields & check account doesnt exist already ;)</p>
+
+				<div class="col-sm-6 controls">
+						<input type="submit" id="btn-signup" class="btn btn-primary btn-block" value="Register" />
+				</div>
+
+				<div class="col-sm-6 controls">
+						<input type="button" ng-click="cancelRegModal()" id="btn-signup" class="btn btn-danger btn-block" value="Cancel" />
+				</div>
+
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>

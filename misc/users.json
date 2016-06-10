@@ -1,0 +1,29 @@
+{
+    "users": {
+        "admin": {
+            "username": "admin",
+            "password": "admin",
+            "userRole": "admin"
+        },
+        "editor": {
+            "username": "editor",
+            "password": "editor",
+            "userRole": "editor"
+        },
+        "guest": {
+            "username": "guest",
+            "password": "guest",
+            "userRole": "guest"
+        }, 
+        "semat": {
+            "username": "semat",
+            "password": "password",
+            "userRole": "admin"
+        },
+        "test": {
+            "username": "test",
+            "password": "test",
+            "userRole": "editor"
+        }
+    }
+}

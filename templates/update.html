@@ -1,0 +1,72 @@
+<div id="loginbox" style="margin-top: 10px;"
+	class="mainbox col-md-12">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<div class="panel-title">Update {{selectedUser.fields.firstname}} {{selectedUser.fields.lastname}} Details</div>
+		</div>
+		<div style="padding-top: 0px" class="panel-body">
+			<form name="updateForm" class="form-horizontal" method="post" ng-submit="submit()" novalidate form-autofill-fix>
+				
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+					<input type="text"
+						class="form-control" name="firstname"
+						ng-model="updatedUserInfo.firstname" required />
+				</div>
+				<div class="error"
+					ng-show="(submitted  || updateForm.firstname.$dirty)  && updateForm.firstname.$invalid">
+					<p class="error" ng-show="updateForm.firstname.$error.required">'Firstname' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+					<input type="text"
+						class="form-control" name="lastname"
+						ng-model="updatedUserInfo.lastname" required />
+				</div>
+				<div class="error"
+					ng-show="(submitted  || updateForm.lastname.$dirty)  && updateForm.lastname.$invalid">
+					<p class="error" ng-show="updateForm.lastname.$error.required">'Lastname' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+					<input type="text"
+						class="form-control" name="role"
+						ng-model="updatedUserInfo.role" required />
+				</div>
+				<div class="error"
+					ng-show="(submitted  || updateForm.role.$dirty)  && updateForm.role.$invalid">
+					<p class="error" ng-show="updateForm.role.$error.required">'Role' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 25px" class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+					<input type="text"
+						class="form-control" name="email"
+						ng-model="updatedUserInfo.email" required ng-init="selectedUser.fields.email"/>
+				</div>
+				<div class="error"
+					ng-show="(submitted  || updateForm.email.$dirty)  && updateForm.email.$invalid">
+					<p class="error" ng-show="updateForm.email.$error.required">'Email' is mandatory</p>
+				</div>
+
+				<div style="margin-top: 10px" class="form-group">
+					<!-- Button -->
+
+				<p ng-show="error" class="error">Update Error - Please ensure all fields have been correctly filled out</p>
+
+				<div class="col-sm-6 controls">
+						<input type="submit" id="btn-signup" class="btn btn-primary btn-block" value="Update" />
+				</div>
+
+				<div class="col-sm-6 controls">
+						<input type="button" ng-click="cancelUpdate()" id="btn-signup" class="btn btn-danger btn-block" value="Cancel" />
+				</div>
+
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
